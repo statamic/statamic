@@ -47,7 +47,10 @@ return [
     */
 
     'routes' => [
-        // '/login' => 'auth/login',
+        '/' => [
+            'template' => 'home',
+            'content' => 'Welcome home.',
+        ],
     ],
 
     /*

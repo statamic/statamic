@@ -1,0 +1,3 @@
+title: Pages
+structure: pages
+route: '{parent_uri}/{slug}'

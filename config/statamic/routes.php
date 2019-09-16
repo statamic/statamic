@@ -16,10 +16,7 @@ return [
     */
 
     'routes' => [
-        '/' => [
-            'template' => 'home',
-            'title' => 'Welcome to your new Statamic website.',
-        ],
+        //
     ],
 
     /*

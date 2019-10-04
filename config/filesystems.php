@@ -67,7 +67,7 @@ return [
         'assets' => [
             'driver' => 'local',
             'root' => public_path('assets'),
-            'url' => env('APP_URL').'/assets',
+            'url' => '/assets',
             'visibility' => 'public',
         ],
 

@@ -58,11 +58,5 @@
         "post-create-project-cmd": [
             "@php artisan key:generate"
         ]
-    },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../cms"
-        }
-    ]
+    }
 }

@@ -1,0 +1,27 @@
+fields:
+  -
+    handle: name
+    field:
+      type: text
+      display: Name
+  -
+    handle: email
+    field:
+      type: text
+      input: email
+      display: Email Address
+  -
+    handle: roles
+    field:
+      type: user_roles
+      width: 50
+  -
+    handle: groups
+    field:
+      type: user_groups
+      width: 50
+  -
+    handle: avatar
+    field:
+      type: assets
+      max_files: 1

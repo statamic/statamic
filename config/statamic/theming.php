@@ -4,32 +4,6 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Smartypants
-    |--------------------------------------------------------------------------
-    |
-    | With this enabled, the "content" field will automatically be run through
-    | the smartypants modifier which translates typographical elements into
-    | their "smart" versions, eg. straight quotes (") into curly ones (”)
-    |
-    */
-
-    'smartypants' => false,
-
-    /*
-    |--------------------------------------------------------------------------
-    | Markdown Hard Wrapping
-    |--------------------------------------------------------------------------
-    |
-    | Normally, line breaks are created in Markdown by ending lines
-    | with two spaces. You can enable this option to get a more
-    | traditional experience seen on websites like Github.
-    |
-    */
-
-    'markdown_hard_wrap' => false,
-
-    /*
-    |--------------------------------------------------------------------------
     | Default view names
     |--------------------------------------------------------------------------
     |
@@ -41,7 +15,6 @@ return [
 
     'views' => [
         'layout' => 'layout',
-        'page' => 'default',
         'entry' => 'post',
         'term' => 'term',
         'default' => 'default',
@@ -62,17 +35,16 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Default fieldsets
+    | Default blueprints
     |--------------------------------------------------------------------------
     |
     | When creating or editing a particular content type in the Control Panel
-    | and a fieldset hasn't been explicitly defined, Statamic will attempt
-    | to load one with the corresponding default fieldset names below.
+    | and a blueprint hasn't been explicitly defined, Statamic will attempt
+    | to load one with the corresponding default blueprint handles below.
     |
     */
 
-    'fieldsets' => [
-        'page' => 'page',
+    'blueprints' => [
         'entry' => 'entry',
         'term' => 'term',
         'asset' => 'asset',

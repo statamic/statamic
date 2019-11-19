@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'repository' => env('STATAMIC_USERS', 'file'),
+    'repository' => 'file',
 
     'repositories' => [
 
@@ -23,8 +23,8 @@ return [
             'driver' => 'file',
             'paths' => [
                 'users' => base_path('users'),
-                'roles' => config_path('statamic/user_roles.yaml'),
-                'groups' => config_path('statamic/user_groups.yaml'),
+                'roles' => resource_path('users/roles.yaml'),
+                'groups' => resource_path('users/groups.yaml'),
             ]
         ],
 
@@ -46,6 +46,6 @@ return [
     |
     */
 
-    'avatars' => 'gravatar',
+    'avatars' => 'initials',
 
 ];

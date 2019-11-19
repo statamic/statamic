@@ -18,35 +18,16 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Locales
+    | Default Addons Paths
     |--------------------------------------------------------------------------
     |
-    | An array for each locale your website will be localized into.
+    | When generating addons via `php please make:addon`, this path will be
+    | used by default. You can still specify custom repository paths in
+    | your composer.json, but this is the path used by the generator.
     |
     */
 
-    'locales' => [
-        'en' => [
-            'name' => 'English',
-            'full' => 'en_US',
-            'url' => config('app.url'),
-        ],
-    ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | Default File Extension
-    |--------------------------------------------------------------------------
-    |
-    | When creating content through the Control Panel, this file extension
-    | will be used. The extension may imply that certain processing will
-    | be made automatically. eg. "md" will render content as Markdown.
-    |
-    | Supported: "md", "html", "textile"
-    |
-    */
-
-    'default_extension' => 'md',
+    'addons_path' => base_path('addons'),
 
     /*
     |--------------------------------------------------------------------------
@@ -76,6 +57,17 @@ return [
 
     'php_max_memory_limit' => null,
 
+    /*
+    |--------------------------------------------------------------------------
+    | Default Date Format
+    |--------------------------------------------------------------------------
+    |
+    | Any time Carbon is cast to a string in views, it should use this format.
+    |
+    */
+
+    'date_format' => 'F jS, Y',
+
     'charset' => 'UTF-8',
     // 'parser_backtrack_limit' => null,
     'timezone' => 'UTC',
@@ -83,6 +75,21 @@ return [
 
     'stache' => [
         'always_update' => true,
-    ]
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Intensive Operations
+    |--------------------------------------------------------------------------
+    |
+    | Sometimes Statamic requires extra resources to complete intensive
+    | operations. Here you may configure system resource limits for
+    | those rare times when we need to turn things up to eleven!
+    |
+    */
+
+    'php_memory_limit' => '-1',
+    'php_max_execution_time' => '-1',
+    'ajax_timeout' => '600000',
 
 ];

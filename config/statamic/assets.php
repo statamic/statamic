@@ -53,7 +53,7 @@ return [
         */
 
         'cache' => false,
-        'cache_path' => 'img',
+        'cache_path' => public_path('img'),
 
         /*
         |--------------------------------------------------------------------------
@@ -97,8 +97,35 @@ return [
     */
 
     'thumbnails' => [
-        'max_width' => 6000,
-        'max_height' => 6000,
+        'max_width' => 10000,
+        'max_height' => 10000,
     ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | File Previews with Google Docs
+    |--------------------------------------------------------------------------
+    |
+    | Filetypes that cannot be rendered with HTML5 can opt into the Google Docs
+    | Viewer. Google will get temporary access to these files so keep that in
+    | mind for any privacy implecations: https://policies.google.com/privacy
+    |
+    */
+
+    'google_docs_viewer' => false,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Cache Metadata
+    |--------------------------------------------------------------------------
+    |
+    | Asset metadata (filesize, dimensions, custom data, etc) will get cached
+    | to optimize performance, so that it will not need to be constantly
+    | re-evaluated from disk. You may disable this option if you are
+    | planning to continually modify the same asset repeatedly.
+    |
+    */
+
+    'cache_meta' => true,
 
 ];

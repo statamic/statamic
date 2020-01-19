@@ -68,6 +68,16 @@ return [
         'users' => [
             'driver' => 'statamic',
         ],
+
+        // 'users' => [
+        //     'driver' => 'eloquent',
+        //     'model' => App\User::class,
+        // ],
+
+        // 'users' => [
+        //     'driver' => 'database',
+        //     'table' => 'users',
+        // ],
     ],
 
     /*

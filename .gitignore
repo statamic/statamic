@@ -3,6 +3,7 @@
 /public/storage
 /public/vendor/statamic
 /storage/*.key
+/storage/glide
 /vendor
 /.idea
 /.vscode

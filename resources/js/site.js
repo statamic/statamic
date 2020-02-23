@@ -12,7 +12,7 @@ require('./bootstrap');
 
 // window.Vue = require('vue');
 //
-// Vue.component('example-component', require('./components/ExampleComponent.vue'));
+// Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 //
 // const site = new Vue({
 //     el: '#site'

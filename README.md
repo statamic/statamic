@@ -4,9 +4,9 @@
 
 Statamic 3 is the very latest and greatest version of Statamic, a uniquely powerful CMS built on [Laravel](https://laravel.com) and designed to make building and managing bespoke websites radically efficient and enjoyable.
 
-It's important to note that while this repo is open and we welcome your feedback and contributions, Statamic is not FOSS (Free and Open Source Software). Please review our [contritubtion guidelines][contribution] guidelines for more details!
+It's important to note that while this repo is open and we welcome your feedback and contributions, Statamic is not FOSS (Free and Open Source Software). Please review our [contribution guidelines][contribution] guidelines for more details!
 
-> **Note:** This repository contains the code for the Statamic application. To contribute to the core package, visit the [Statamic core package repository][app-repo].
+> **Note:** This repository contains the code for the Statamic application. To contribute to the core package, visit the [Statamic core package repository][cms-repo].
 
 
 ## Open Beta
@@ -58,7 +58,7 @@ In order to ensure that the Statamic community is welcoming to all and generally
 ## Important Links
 
 - [Statamic 3 Documentation][docs]
-- [Statamic 3 Application Repo][app-repo]
+- [Statamic 3 Core Package Repo][cms-repo]
 - [Statamic 3 Migrator](https://github.com/statamic/migrator)
 - [Statamic 3 Development Blog](https://v3.statamic.com)
 - [Statamic Discord][discord]
@@ -66,4 +66,4 @@ In order to ensure that the Statamic community is welcoming to all and generally
 [docs]: https://statamic.dev/
 [discord]: https://statamic.com/discord
 [contribution]: https://github.com/statamic/cms/blob/master/CONTRIBUTING.md
-[app-repo]: https://github.com/statamic/statamic
+[cms-repo]: https://github.com/statamic/cms

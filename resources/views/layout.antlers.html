@@ -4,45 +4,13 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ site_name }}</title>
-        <style>
-            html, body {
-                background-color: hsl(210, 30%, 95%);
-                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-                height: 100vh;
-                margin: 0;
-            }
-            .container {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-                height: 100vh;
-            }
-            .content {
-                padding-bottom: 64px;
-            }
-            .links a {
-                color: #636b6f;
-                padding: 8px;
-                margin: 0 8px;
-                font-size: 12px;
-                font-weight: 600;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-            .links a:hover {
-                background: hsl(210, 15%, 86%);
-                border-radius: 4px;
-            }
-        </style>
+        <title>{{ title ?? site_name }}</title>
+        <link rel="stylesheet" href="{{ mix src='css/tailwind.css' }}">
+        <script src="{{ mix src='/js/site.js' }}"></script>
     </head>
-    <body>
-        <div class="container">
-            <div class="content">
-
-                {{ template_content }}
-
-            </div>
+    <body class="bg-gray-200 font-sans leading-normal text-grey-800">
+        <div class="mx-auto px-2 h-screen flex items-center justify-center">
+            {{ template_content }}
         </div>
     </body>
 </html>

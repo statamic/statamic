@@ -21,7 +21,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | When a user logs into the Control Panel, they will be taken here.
-    | Supported: "dashboard" or "pages"
+    | For example: "dashboard", "collections/pages", etc.
     |
     */
 
@@ -63,5 +63,16 @@ return [
     */
 
     'pagination_size' => 50,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Links to Documentation
+    |--------------------------------------------------------------------------
+    |
+    | Show contextual links to documentation throughout the Control Panel.
+    |
+    */
+
+    'link_to_docs' => true,
 
 ];

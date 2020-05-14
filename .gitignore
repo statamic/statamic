@@ -2,8 +2,7 @@
 /public/hot
 /public/storage
 /public/vendor/statamic
-/storage/*.key
-/storage/glide
+/storage
 /vendor
 .env
 .env.backup

@@ -1,0 +1,9 @@
+/* humans.txt */
+
+Hello! This site was designed and built by Dave Smyth.
+
+On the web:
+- davesmyth.com
+- websmyth.co
+
+Twitter: @websmyth

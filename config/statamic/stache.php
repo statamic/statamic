@@ -53,6 +53,16 @@ return [
             'directory' => base_path('content/navigation'),
         ],
 
+        'collection-trees' => [
+            'class' => Stores\CollectionTreeStore::class,
+            'directory' => base_path('content/trees/collections'),
+        ],
+
+        'nav-trees' => [
+            'class' => Stores\NavTreeStore::class,
+            'directory' => base_path('content/trees/navigation'),
+        ],
+
         'globals' => [
             'class' => Stores\GlobalsStore::class,
             'directory' => base_path('content/globals'),
@@ -61,6 +71,10 @@ return [
         'asset-containers' => [
             'class' => Stores\AssetContainersStore::class,
             'directory' => base_path('content/assets'),
+        ],
+
+        'assets' => [
+            'class' => Stores\AssetsStore::class,
         ],
 
         'users' => [
@@ -83,6 +97,24 @@ return [
 
     'indexes' => [
         //
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Locking
+    |--------------------------------------------------------------------------
+    |
+    | In order to prevent concurrent requests from updating the Stache at
+    | the same and wasting resources, it will be "locked" so subsequent
+    | requests will have to wait until the first has been completed.
+    |
+    | https://statamic.dev/stache#locks
+    |
+    */
+
+    'lock' => [
+        'enabled' => true,
+        'timeout' => 30,
     ],
 
 ];

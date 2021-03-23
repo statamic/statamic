@@ -1,7 +1,4 @@
 title: Pages
 structure:
   root: true
-  tree:
-    -
-      entry: home
 route: '{parent_uri}/{slug}'

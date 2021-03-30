@@ -12,7 +12,7 @@ return [
     |
     */
 
-    'strategy' => null,
+    'strategy' => env('STATAMIC_STATIC_CACHING_STRATEGY', null),
 
     /*
     |--------------------------------------------------------------------------
@@ -78,5 +78,18 @@ return [
         ],
 
     ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Ignoring Query Strings
+    |--------------------------------------------------------------------------
+    |
+    | Statamic will cache pages of the same URL but with different query
+    | parameters separately. This is useful for pages with pagination.
+    | If you'd like to ignore the query strings, you may do so.
+    |
+    */
+
+    'ignore_query_strings' => false,
 
 ];

@@ -9,15 +9,14 @@
         "production": "mix --production"
     },
     "devDependencies": {
-        "autoprefixer": "^10.1.0",
+        "autoprefixer": "^10.2.5",
         "cross-env": "^7.0",
         "laravel-mix": "^6.0",
-        "postcss": "^8.2.1",
-        "postcss-import": "^14.0.0",
-        "postcss-nested": "^5.0.3",
+        "postcss": "^8.2.9",
+        "postcss-import": "^14.0.1",
+        "postcss-nested": "^5.0.5",
         "postcss-preset-env": "^6.7.0",
-        "tailwindcss": "^2.0.2",
+        "tailwindcss": "^2.1.1",
         "vue-template-compiler": "^2.6.12"
-    },
-    "dependencies": {}
+    }
 }

@@ -22,66 +22,14 @@ return [
     | Stores
     |--------------------------------------------------------------------------
     |
-    | Here you may configure which stores are used inside the Stache.
+    | Here you may configure the stores that are used inside the Stache.
+    |
+    | https://statamic.dev/stache#stores
     |
     */
 
     'stores' => [
-
-        'taxonomies' => [
-            'class' => Stores\TaxonomiesStore::class,
-            'directory' => base_path('content/taxonomies'),
-        ],
-
-        'terms' => [
-            'class' => Stores\TermsStore::class,
-            'directory' => base_path('content/taxonomies'),
-        ],
-
-        'collections' => [
-            'class' => Stores\CollectionsStore::class,
-            'directory' => base_path('content/collections'),
-        ],
-
-        'entries' => [
-            'class' => Stores\EntriesStore::class,
-            'directory' => base_path('content/collections'),
-        ],
-
-        'navigation' => [
-            'class' => Stores\NavigationStore::class,
-            'directory' => base_path('content/navigation'),
-        ],
-
-        'collection-trees' => [
-            'class' => Stores\CollectionTreeStore::class,
-            'directory' => base_path('content/trees/collections'),
-        ],
-
-        'nav-trees' => [
-            'class' => Stores\NavTreeStore::class,
-            'directory' => base_path('content/trees/navigation'),
-        ],
-
-        'globals' => [
-            'class' => Stores\GlobalsStore::class,
-            'directory' => base_path('content/globals'),
-        ],
-
-        'asset-containers' => [
-            'class' => Stores\AssetContainersStore::class,
-            'directory' => base_path('content/assets'),
-        ],
-
-        'assets' => [
-            'class' => Stores\AssetsStore::class,
-        ],
-
-        'users' => [
-            'class' => Stores\UsersStore::class,
-            'directory' => base_path('users'),
-        ],
-
+        //
     ],
 
     /*

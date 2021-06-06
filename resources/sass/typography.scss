@@ -1,0 +1,56 @@
+html {
+    // font-family: var(--serif);
+    text-rendering: optimizeSpeed;
+    font-kerning: normal;
+    -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+    -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+    -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+    font-feature-settings: "kern", "liga", "clig", "calt";
+    color: var(--color-text);
+    // font-weight: var(--normal-weight);
+}
+body {
+  line-height: var(--line-height);
+}
+body,
+button, 
+input, 
+select, 
+textarea {
+    font-size: var(--font-size);
+}
+body, 
+a {
+  color: var(--color-text);
+}
+main a {
+    // --negative: 0.05em;
+    // --positive: -0.05em;
+    // font-weight: var(--bold-weight);
+    text-shadow: var(--positive) 0 0 var(--color-bg), 
+        var(--negative) 0 0 var(--color-bg), 
+        0 var(--positive) 0 var(--color-bg), 
+        0 var(--negative) 0 var(--color-bg),
+        var(--positive) 0 0 var(--color-bg),
+        var(--negative) 0 0 var(--color-bg),
+        0 var(--positive) 0 var(--color-bg),
+        0 var(--negative) 0 var(--color-bg);
+    background-image: linear-gradient(var(--color-text), var(--color-text));
+    background-repeat: repeat-x;
+    background-position: bottom 5% center;
+    background-size: 100% 0.07rem;
+    text-decoration: none;
+}
+main a:hover,
+main a:active,
+main a:focus {
+    background-image: none;
+}
+strong,
+b {
+    font-weight: var(--bold-weight);
+}
+em,
+i {
+    font-style: italic;
+}

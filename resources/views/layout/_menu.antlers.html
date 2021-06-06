@@ -1,0 +1,12 @@
+<nav role="navigation">
+    <a href="/" class="logo" title="home"><!-- Site Title --></a>
+    <div class="headerNavs">
+        <ul class="nav">
+            {{ nav:main }}
+                <li>
+                    <a href="{{ url }}"{{ if is_current }} class="navCurrent"{{ endif }}>{{ title }}</a>
+                </li>
+            {{ /nav:main }}
+        </ul>
+    </div>
+</nav>

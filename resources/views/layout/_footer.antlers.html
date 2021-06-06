@@ -1,0 +1,15 @@
+<footer role="contentinfo">
+    <a href="https://websmyth.co" rel="noopener nofollow">Site by Websmyth</a>
+</footer>
+{{ scripts:footer_scripts }}
+    <!-- {{ description }} -->
+        {{ code }}
+    <!-- End {{ description }} -->
+{{ /scripts:footer_scripts }}
+<script src="/js/site.js"></script>
+{{ if app:env == "prod" }}
+    <!-- analytics script -->    
+{{ endif }}
+{{ aardvark-seo:footer }}
+</body>
+</html>

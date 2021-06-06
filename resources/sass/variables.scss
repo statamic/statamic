@@ -1,0 +1,34 @@
+:root {
+    // --color-text: #111;
+    // --color-highlight: #fff;
+    // --serif: Newsreader, 'Times New Roman', Times, Georgia, serif;
+    // --line-height: 1.4;
+    // --line-height-s: 1.1;
+    --normal-weight: 400;
+    // --bold-weight: 600;
+    // --letter-spacing: 0.05em;
+    // --font-size: calc(1.125rem + 0.2vw);
+    // --font-size-s: calc(0.9rem + 0.2vw);
+    // --font-size-xs: calc(0.8rem + 0.2vw);
+    // --width: 70rem;
+    // --max-width: min(var(--width), calc(100% - var(--layout-space)));
+    // --max-width-text: min(50ch, 100%);
+    --space-5xl: 5em;
+    --space-4xl: 3em;
+    --space-3xl: 2em;
+    --space-2xl: 1.5em;
+    --space-xl: 1.25em;
+    --space-l: 1.125em;
+    --space: 1em;
+    --space-s: 0.7em;
+    --space-xs: 0.5em;
+    --space-2xs: 0.3em;
+    --space-3xs: 0.2em;
+    --space-4xs: 0.1em;
+    --layout-space-3xl: calc(6rem + 10vw);
+    --layout-space-2xl: calc(6rem + 6vw);
+    --layout-space-xl: calc(6rem + 4vw);
+    --layout-space-l: calc(6rem + 3vw);
+    --layout-space-m: calc(6rem + 1vw);
+    --layout-space: calc(3rem + 2vw);
+}

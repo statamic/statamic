@@ -1,0 +1,74 @@
+/* Visually hidden */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: no-wrap;
+}
+/* Skip links */
+/* [href="#content"], */
+.skip-link {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    position: 10;
+}
+[href="#content"]:focus,
+.skip-link:focus {
+    top: 1em;
+    left: 1em;
+    right: auto;
+    z-index: 10;
+    background: var(--color-highlight);
+    color: var(--color-text);
+    text-decoration: none;
+    font-family: var(--sans);
+    font-weight: var(--bold-weight);
+    padding: var(--space);
+}
+/* Screen reader text */
+.screen-reader-text, 
+.screen-reader-text span, 
+.screen-reader-shortcut {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    clip: rect(0,0,0);
+    border: 0;
+    overflow: hidden;
+    box-sizing: content-box;
+    font-family: var(--sans-serif);
+}
+.screen-reader-text:focus, 
+.screen-reader-shortcut:focus {
+    clip: auto;
+    height: auto;
+    width: auto;
+    display: block;
+    left: 10px;
+    top: 10px;
+    color: var(--color-text);
+    font-size: var(--font-size);
+    font-family: var(--sans-serif);
+    background: var(--color-bg);
+    z-index: 99999;
+    text-decoration: none;
+    border: 1px solid var(--color-text);
+    padding: var(--space-s) var(--space);
+}
+/* Transition */
+a {
+    transition: 
+        color ease-in-out 0.3s;
+}
+/* Focus */
+a:focus,
+main a:focus {
+    // outline: solid 0.1em #c7a16e;
+    // outline-offset: 0.07em;
+    // background-color: #f3e5d3;
+    background-image: none;
+    text-decoration: none;
+}

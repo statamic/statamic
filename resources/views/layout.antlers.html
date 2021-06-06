@@ -1,16 +1,11 @@
-<!doctype html>
-<html lang="{{ site:short_locale }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ title ?? site:name }}</title>
-        <link rel="stylesheet" href="{{ mix src='css/tailwind.css' }}">
-        <script src="{{ mix src='/js/site.js' }}"></script>
-    </head>
-    <body class="bg-gray-200 font-sans leading-normal text-grey-800">
-        <div class="mx-auto px-2 h-screen flex items-center justify-center">
-            {{ template_content }}
+{{ partial:layout/header }}
+    <body class="{{ template }}Template">
+        {{ aardvark-seo:body }}
+        <a href="#content" class="skip-link">Skip to content</a>
+        <div class="contentWrapper">
+            {{ partial:layout/menu }}
+            <main class="container" id="content" role="main">
+                {{ template_content }}
+            </main>
         </div>
-    </body>
-</html>
+{{ partial:layout/footer }}

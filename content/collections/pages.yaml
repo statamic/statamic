@@ -1,7 +1,5 @@
 title: Pages
+revisions: false
+route: '{parent_uri}/{slug}'
 structure:
   root: true
-  tree:
-    -
-      entry: home
-route: '{parent_uri}/{slug}'

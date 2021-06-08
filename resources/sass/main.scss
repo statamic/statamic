@@ -1,9 +1,39 @@
 @import "reset.scss";
 @import "fonts.scss";
 @import "variables.scss";
+@import "mixins.scss";
 @import "typography.scss";
 @import "header.scss";
 @import "nav.scss";
 @import "elements.scss";
 @import "layout.scss";
 @import "footer.scss";
+
+/* Optional components – uncomment to activate
+   ------------------------------------------------------------ */
+
+/// A11y Dialog
+/// @link https://github.com/KittyGiraudel/a11y-dialog
+/// Demo @link https://codepen.io/colinlewis/pen/mdEVyYQ
+// @import "components/a11y-dialog/a11y-dialog";
+
+/* ------------------------------ */
+
+/// Accessible accordions & disclosure widgets
+/// @link https://github.com/scottaohara/a11y_accordions
+/// Demo @link https://codepen.io/colinlewis/pen/PozZpVX
+// @import "components/accordions/accordions";
+
+/* ------------------------------ */
+
+/// Basic toggle function
+// @import "components/toggle/toggle";
+
+/* ------------------------------ */
+
+/// Responsive nav
+/// @link https://github.com/unlikelyobjects/responsive-nav
+/// Demo @link https://unlikelyobjects.github.io/responsive-nav/
+// @import "components/responsive-nav/responsive-nav-icons";
+// @import "components/responsive-nav/responsive-nav-variables";
+// @import "components/responsive-nav/responsive-nav-main";

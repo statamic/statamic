@@ -1,0 +1,346 @@
+/* Responsive nav
+   ------------------------------------------------------------ */
+
+/* responsive-nav.js 1.0.39 by @viljamis
+   ------------------------------ */
+.nav-collapse li {
+    width: 100%;
+    display: block;
+}
+
+.js .nav-collapse {
+    clip: rect(0 0 0 0);
+    max-height: 0;
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.nav-collapse.opened {
+    max-height: 9999px;
+}
+
+.nav-toggle {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+    user-select: none;
+}
+
+@media screen and (min-width: $responsive-nav-breakpoint) {
+    .js .nav-collapse {
+        position: relative;
+        &.closed {
+            max-height: none;
+        }
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+}
+
+/* Basic layout
+   ------------------------------ */
+
+.nav-collapse,
+.nav-collapse * {
+    box-sizing: border-box;
+}
+
+.nav-collapse {
+    user-select: none;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+
+        ul {
+            flex-direction: column;
+            justify-content: flex-start;
+            list-style-type: none;
+        }
+
+        @media screen and (max-width: $responsive-nav-breakpoint) {
+            // Small screens
+            flex-direction: column;
+        }
+    }
+}
+
+.nav-collapse,
+.nav-collapse ul,
+.nav-collapse li {
+    width: auto;
+
+    @media screen and (max-width: $responsive-nav-breakpoint) {
+        // Small screens
+        width: 100%;
+    }
+
+    a {
+        // Large screen links
+        color: $desktop-link-color;
+        background: $desktop-link-background-color;
+        text-decoration: none;
+        width: 100%;
+        text-align: center;
+
+        @media screen and (max-width: $responsive-nav-breakpoint) {
+            // Small screens
+            text-align: left;
+            display: block;
+            height: $responsive-nav-height;
+            line-height: $responsive-nav-height;
+        }
+    }
+}
+
+/* Nav toggle
+   ------------------------------ */
+.nav-toggle {
+    border: none;
+    color: white;
+    background-color: black;
+    user-select: none;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    float: right;
+    padding: 0.75em;
+    margin: 1em;
+
+    @include on-event {
+        color: black;
+        background-color: red;
+    }
+}
+
+/* Dropdown levels
+   ------------------------------ */
+
+.nav-collapse a:hover,
+.nav-collapse li.focus > a {
+    background-color: blue;
+}
+
+// Dropdown level small screen styles
+@media screen and (max-width: $responsive-nav-breakpoint) {
+    .js .nav-collapse {
+        visibility: hidden;
+
+        &.opened {
+            visibility: visible;
+        }
+
+        // Enable active class to let the navigation expand over the calculated max height.
+        &.multiple-level-nav.opened.dropdown-active {
+            max-height: 9999px !important;
+        }
+
+        &.multiple-level-nav .sub-menu.toggled {
+            display: block;
+            max-height: 9999px;
+            position: relative;
+        }
+
+        li {
+            position: relative;
+        }
+    }
+}
+
+// The optional button for expanding submenus
+.dropdown-toggle {
+    display: none;
+}
+
+/* Create expandable dropdown submenus
+   ------------------------------ */
+
+// To activate, change max-width to $responsive-nav-breakpoint
+@media screen and (max-width: 0) {
+    .js .nav-collapse {
+        &.multiple-level-nav .sub-menu {
+            clip: rect(0 0 0 0);
+            max-height: 0;
+            position: absolute;
+            display: none; // Don't focus on sub menu items unless the sub menu is open.
+            overflow: hidden;
+            zoom: 1;
+        }
+
+        // Submenu toggle buttons
+        .dropdown-toggle {
+            display: block;
+            border: none;
+            color: black;
+            background-color: grey;
+            content: "";
+            height: $responsive-nav-height;
+            width: $responsive-nav-height;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 0;
+            right: 2%;
+            text-transform: lowercase;
+
+            @include on-event {
+                background-color: red;
+                color: black;
+            }
+
+            &:after {
+                content: "+";
+                font-size: 2em;
+            }
+
+            &.toggled:after {
+                content: "-";
+                font-size: 2em;
+                color: white;
+            }
+        }
+    }
+}
+
+/* Small screen nav levels
+   ------------------------------ */
+.dropdown ul a {
+    background: #333;
+    padding-left: 1.5em;
+}
+
+.dropdown ul ul a {
+    background: #555;
+    padding-left: 2.5em;
+}
+
+.dropdown ul ul {
+    border: 0;
+    padding: 0;
+}
+
+.dropdown .dropdown.opened .has-dropdown {
+    background: green;
+    color: red;
+}
+
+/* Large screen styles
+   ------------------------------ */
+@media screen and (min-width: $responsive-nav-breakpoint) {
+    .nav-collapse {
+        padding-right: 2%;
+        position: relative;
+    }
+
+    .js .nav-collapse,
+    .js .nav-collapse .dropdown ul {
+        max-height: none;
+        overflow: visible;
+    }
+
+    .nav-collapse .dropdown {
+        position: relative;
+
+        li {
+            width: 100%;
+        }
+
+        ul a {
+            text-align: center; // Align the submenu links
+            border: 0;
+        }
+    }
+
+    .nav-collapse {
+        li {
+            border: 0;
+            display: inline-block;
+            height: $responsive-nav-height;
+            line-height: $responsive-nav-height;
+            position: relative;
+
+            a {
+                display: inline-block;
+                padding: 0 2em;
+            }
+        }
+
+        ul ul {
+            margin: 0;
+            position: absolute;
+            top: 85px;
+            left: -999em;
+            z-index: 99999;
+            text-align: center;
+
+            a {
+                padding: 15px 12px;
+                white-space: normal;
+                width: 150px;
+            }
+        }
+
+        ul ul ul {
+            left: -999em;
+            top: 20px;
+        }
+
+        li li {
+            border: 0;
+            display: block;
+            height: auto;
+            line-height: 1.0909090909;
+        }
+    }
+
+    /* Dropdown layout
+     ------------------------------ */
+    .nav-collapse ul li:hover > ul,
+    .nav-collapse ul li.focus > ul {
+        top: $responsive-nav-height;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .nav-collapse ul ul li:hover > ul,
+    .nav-collapse ul ul li.focus > ul {
+        top: 0;
+        left: 0;
+        transform: translateX(100%);
+    }
+}
+
+/* Screen reader text
+   ------------------------------ */
+.screen-reader-text {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+
+    &:focus {
+        background-color: #f1f1f1;
+        border-radius: 3px;
+        box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+        clip: auto !important;
+        color: rgb(32, 32, 165);
+        display: block;
+        font-size: 16px;
+        font-size: 0.875rem;
+        font-weight: bold;
+        height: auto;
+        left: 5px;
+        line-height: normal;
+        padding: 15px 23px 14px;
+        text-decoration: none;
+        top: 5px;
+        width: auto;
+        z-index: 100000; /* Above WP toolbar. */
+    }
+}

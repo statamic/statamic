@@ -1,0 +1,180 @@
+/* Accordion container element
+   ------------------------------ */
+.accordion {
+    list-style: none;
+    margin: 0 auto 6em auto;
+    padding: 0;
+
+    h3:not(.accordion__heading):nth-of-type(1) {
+        text-align: center;
+        margin: 1em auto;
+        font-size: 1.75em;
+    }
+}
+
+.accordion > li {
+    margin: 0;
+}
+
+/**
+ * Add zero-width space. needed to ensure Safari + VO respect list semantics.
+ * Set the before content to position absolute to negate any visible space
+ * the before content could add to the document.
+ */
+.accordion > li:before {
+    content: "\200B";
+    position: absolute;
+}
+
+/* Accordion Heading
+   ------------------------------ */
+.accordion__heading {
+    margin: -1px 0 0 0;
+}
+
+.accordion__trigger {
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 2px solid var(--color-grey-alt-2);
+    border-radius: 10px;
+    box-shadow: none;
+    color: var(--color-text);
+    cursor: pointer;
+    display: block;
+    font-family: var(--sans);
+    margin: 0;
+    padding: 1.5em 3em 1.5em 2em;
+    position: relative;
+    text-align: left;
+    width: 100%;
+    z-index: 2;
+    transition: 0.1s ease-in-out;
+    font-size: 0.7em;
+}
+
+.accordion__trigger:after {
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 1em;
+    bottom: 0;
+    transition: transform 0.2s ease-in-out;
+    transform-origin: center center;
+    transform: rotate(45deg);
+    height: 2.25em;
+    width: 2.25em;
+    background-color: var(--color-highlight-alt);
+    border: 1px solid var(--color-highlight-alt);
+    background-image: url("../assets/icons/cross.svg");
+    background-repeat: no-repeat;
+    background-size: 0.7em;
+    background-position: center;
+    border-radius: 10em;
+}
+
+.accordion__trigger:hover {
+    background-color: var(--color-highlight-alt);
+    border-color: var(--color-highlight-alt);
+}
+
+.accordion__trigger:hover:after {
+    border-color: var(--color-highlight);
+}
+
+.accordion__trigger:focus:after,
+.accordion__trigger[aria-expanded="true"]:after {
+    border-color: var(--color-highlight);
+}
+
+.accordion__trigger[aria-expanded="true"]:after {
+    transform: rotate(180deg);
+}
+
+/**
+ * This is needed to allow a double tap iOS 11
+ * Safari + VO to function correctly, if there
+ * are multiple elements (wrapper spans) to layout
+ * text nodes within the accordion button.
+
+	-- This is not needed if a button only contains text
+	   and no other child nodes wrapping the text --
+
+.accordion__trigger > * {
+	pointer-events: none;
+}
+ */
+
+.accordion__trigger:hover,
+.accordion__trigger:focus {
+    background-color: --color-highlight-alt;
+    outline: none;
+}
+
+.accordion__trigger:focus {
+    box-shadow: inset 0 0 0 2px blue;
+}
+
+.accordion__trigger[aria-disabled="true"]:hover {
+    background-color: blue;
+    color: #fff;
+    cursor: not-allowed;
+}
+
+.accordion__trigger[aria-disabled="true"]:focus {
+    background-color: blue;
+}
+
+.accordion__panel {
+    background-color: inherit;
+    max-height: 0vh;
+    overflow: hidden;
+    padding: 0.001em 1.25em;
+    position: relative;
+    visibility: hidden;
+    z-index: 1;
+    margin-bottom: 1.5em;
+}
+
+.accordion__panel--transition {
+    transition: max-height 0.15s ease-in-out;
+    // , padding-top 0.2s ease-in-out,
+    //     padding-bottom 0.2s ease-in-out
+}
+
+.accordion__panel > :last-child {
+    margin-bottom: 0;
+}
+
+.accordion__panel[aria-hidden="false"] {
+    max-height: 100%;
+    overflow: auto;
+    padding: 0 2em 3em 2em;
+    visibility: visible;
+    background: var(--color-highlight-alt);
+    border: 2px solid var(--color-highlight-alt);
+    border-radius: 0 0 10px 10px;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -3.5em;
+        right: -5.5em;
+        background-image: url("../assets/icons/icon-pink.svg");
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-size: 14em;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+    }
+}
+
+.accordion__trigger[aria-expanded="true"] {
+    background: var(--color-highlight-alt);
+    color: var(--color-text);
+    border: 2px solid var(--color-highlight-alt);
+    border-radius: 10px 10px 0 0;
+}

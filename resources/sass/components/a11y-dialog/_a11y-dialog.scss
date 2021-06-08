@@ -1,0 +1,104 @@
+/// A11y Dialog @link https://github.com/KittyGiraudel/a11y-dialog
+
+/* Dialog basic functions
+   ------------------------------ */
+
+[data-a11y-dialog-native] .dialog-overlay {
+    display: none;
+}
+
+dialog[open] {
+    display: block;
+}
+
+.dialog[aria-hidden="true"] {
+    display: none;
+}
+
+/* Dialog appearance
+   ------------------------------ */
+
+// Prevent background scrolling by adding this class to <body> when the dialog is active
+.static {
+    position: static;
+    overflow: hidden;
+}
+
+.dialog-overlay {
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.56);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+dialog::backdrop {
+    background-color: rgba(255, 255, 255, 0.56);
+}
+
+.dialog-content {
+    color: white;
+    border: none;
+    background-color: var(--color-text);
+    z-index: 3;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1em;
+    min-width: calc(100vw - 15vw);
+    min-height: calc(50vh - 3rem);
+    max-width: 95%;
+    padding: 3rem;
+    // text-align: center;
+}
+
+.dialog-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: white;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+}
+
+.dialog-button:hover,
+.dialog-button:active {
+    // color: tomato;
+}
+/* Dialog animation
+   ------------------------------ */
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes appear {
+    from {
+        transform: translate(-50%, -40%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+.dialog:not([aria-hidden="true"]) > .dialog-overlay {
+    animation: fade-in 250ms 1 both;
+}
+
+.dialog:not([aria-hidden="true"]) > .dialog-content {
+    animation: appear 500ms 150ms 1 both;
+}

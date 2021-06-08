@@ -1,0 +1,43 @@
+/* Toggle
+   ------------------------------ */
+
+.toggleContent {
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.toggleContent.is-visible {
+    opacity: 1;
+}
+
+// Hide the items beyond X number of items
+.loadParent {
+    // NB – Syncronize the number of items with the count on the loadMore link
+    li:nth-child(n + 4) {
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        opacity: 0;
+        transition: all 500ms;
+    }
+
+    &.loadMoreItems {
+        // The Load more link disappears. Add some padding to retain the correct layout.
+        padding-bottom: 3em;
+
+        // Toggle .loadMore class to show the items
+        // NB – Syncronize the number of items with the count on the loadMore link
+        li:nth-child(n + 4) {
+            clip: auto;
+            clip-path: initial;
+            height: 100%;
+            overflow: visible;
+            position: relative;
+            white-space: normal;
+            opacity: 1;
+        }
+    }
+}

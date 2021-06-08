@@ -1,0 +1,50 @@
+/* Mixins main
+   ------------------------------------------------------------ */
+
+/* Event wrapper 
+   ------------------------------ */
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+    @if $self {
+        &,
+        &:hover,
+        &:active,
+        &:focus {
+            @content;
+        }
+    } @else {
+        &:hover,
+        &:active,
+        &:focus {
+            @content;
+        }
+    }
+}
+
+/* Visually hidden
+   ------------------------------ */
+@mixin vh {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap; /* added line */
+}
+
+/* Animation
+   ------------------------------ */
+@mixin smoothHover {
+    transition: all 0.15s ease-in-out;
+}
+
+/* Full bleed
+   ------------------------------ */
+/// @link https://piccalil.li/tutorial/creating-a-full-bleed-css-utility/
+@mixin fullBleed {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+}

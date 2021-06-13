@@ -1,7 +1,5 @@
 <?php
 
-use Statamic\Stache\Stores;
-
 return [
 
     /*

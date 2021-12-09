@@ -6,15 +6,16 @@
         "watch": "mix watch",
         "watch-poll": "mix watch -- --watch-options-poll=1000",
         "hot": "mix watch --hot",
+        "prod": "npm run production",
         "production": "mix --production"
     },
     "devDependencies": {
-        "autoprefixer": "^10.2.5",
-        "cross-env": "^7.0",
-        "laravel-mix": "^6.0",
+        "autoprefixer": "^10.4.0",
+        "cross-env": "^7.0.3",
+        "laravel-mix": "^6.0.6",
         "postcss": "^8.2.9",
-        "postcss-import": "^14.0.1",
-        "postcss-nested": "^5.0.5",
+        "postcss-import": "^14.0.2",
+        "postcss-nested": "^5.0.6",
         "postcss-preset-env": "^6.7.0",
         "tailwindcss": "^2.1.1",
         "vue-template-compiler": "^2.6.12"

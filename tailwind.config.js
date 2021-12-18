@@ -1,16 +1,12 @@
 module.exports = {
-  mode: 'jit',
-  purge: {
-    content: [
-      './resources/**/*.antlers.html',
-      './resources/**/*.blade.php',
-      './content/**/*.md'
-    ]
-  },
-  important: true,
+  content: [
+    './resources/**/*.antlers.html',
+    './resources/**/*.blade.php',
+    './resources/**/*.vue',
+    './content/**/*.md'
+  ],
   theme: {
     extend: {},
   },
-  variants: {},
   plugins: [],
 }

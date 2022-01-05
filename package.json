@@ -11,6 +11,7 @@
     "devDependencies": {
         "autoprefixer": "^10.4.0",
         "cross-env": "^7.0",
+        "css-loader": "^5.2.7",
         "laravel-mix": "^6.0",
         "postcss": "^8.4.5",
         "postcss-import": "^14.0.1",

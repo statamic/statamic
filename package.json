@@ -12,13 +12,11 @@
     "devDependencies": {
         "@tailwindcss/typography": "^0.5.1",
         "autoprefixer": "^10.4.0",
-        "cross-env": "^7.0.3",
+        "cross-env": "^7.0",
         "css-loader": "^5.2.7",
-        "laravel-mix": "^6.0.6",
+        "laravel-mix": "^6.0",
         "postcss": "^8.4.5",
-        "postcss-import": "^14.0.2",
-        "postcss-nested": "^5.0.6",
-        "postcss-preset-env": "^7.2.3",
+        "postcss-import": "^14.0.1",
         "tailwindcss": "^3.0.19",
         "vue-template-compiler": "^2.6.12"
     }

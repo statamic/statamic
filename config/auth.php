@@ -31,7 +31,7 @@ return [
     | users are actually retrieved out of your database or other storage
     | mechanisms used by this application to persist your user's data.
     |
-    | Supported: "session", "token"
+    | Supported: "session"
     |
     */
 
@@ -39,12 +39,6 @@ return [
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
-        ],
-
-        'api' => [
-            'driver' => 'token',
-            'provider' => 'users',
-            'hash' => false,
         ],
     ],
 
@@ -61,19 +55,15 @@ return [
     | sources which represent each model / table. These sources may then
     | be assigned to any extra authentication guards you have defined.
     |
-    | Supported: "statamic", "database", "eloquent"
+    | Supported: "database", "eloquent"
     |
     */
 
     'providers' => [
         'users' => [
             'driver' => 'statamic',
+            'model' => App\Models\User::class,
         ],
-
-        // 'users' => [
-        //     'driver' => 'eloquent',
-        //     'model' => App\Models\User::class,
-        // ],
 
         // 'users' => [
         //     'driver' => 'database',
@@ -108,6 +98,13 @@ return [
             'provider' => 'users',
             'table' => 'password_activations',
             'expire' => 4320,
+            'throttle' => 60,
+        ],
+
+        'users' => [
+            'provider' => 'users',
+            'table' => 'password_resets',
+            'expire' => 60,
             'throttle' => 60,
         ],
     ],

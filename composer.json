@@ -1,25 +1,44 @@
 {
     "name": "statamic/statamic",
     "description": "Statamic",
-    "keywords": ["statamic", "cms", "flat file", "laravel"],
+    "keywords": [
+        "statamic",
+        "cms",
+        "flat file",
+        "laravel"
+    ],
     "type": "project",
     "require": {
-        "php": "^7.3|^8.0",
-        "fruitcake/laravel-cors": "^2.0",
-        "guzzlehttp/guzzle": "^7.0.1",
-        "laravel/framework": "^8.75",
-        "laravel/sanctum": "^2.11",
-        "laravel/tinker": "^2.5",
-        "statamic/cms": "3.2.*"
+        "php": "^8.0",
+        "fruitcake/laravel-cors": "^2.0.5",
+        "guzzlehttp/guzzle": "^7.2",
+        "laravel/framework": "^9.0",
+        "laravel/tinker": "^2.7",
+        "statamic/cms": "3.3.*",
+        "laravel/sanctum": "^2.14"
     },
     "require-dev": {
-        "barryvdh/laravel-debugbar": "^3.5",
-        "facade/ignition": "^2.5",
+        "barryvdh/laravel-debugbar": "^3.6",
         "fakerphp/faker": "^1.9.1",
-        "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.4",
-        "nunomaduro/collision": "^5.10",
-        "phpunit/phpunit": "^9.5.10"
+        "nunomaduro/collision": "^6.1",
+        "phpunit/phpunit": "^9.5.10",
+        "spatie/laravel-ignition": "^1.0",
+        "laravel/sail": "^1.13"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/package-versions-deprecated": true,
+            "pixelfear/composer-dist-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
     },
     "autoload": {
         "psr-4": {
@@ -50,6 +69,9 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
+        ],
+        "post-update-cmd": [
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
         ]
     },
     "extra": {

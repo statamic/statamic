@@ -55,19 +55,15 @@ return [
     | sources which represent each model / table. These sources may then
     | be assigned to any extra authentication guards you have defined.
     |
-    | Supported: "statamic", "database", "eloquent"
+    | Supported: "database", "eloquent"
     |
     */
 
     'providers' => [
         'users' => [
             'driver' => 'statamic',
+            'model' => App\Models\User::class,
         ],
-
-        // 'users' => [
-        //     'driver' => 'eloquent',
-        //     'model' => App\Models\User::class,
-        // ],
 
         // 'users' => [
         //     'driver' => 'database',
@@ -102,6 +98,13 @@ return [
             'provider' => 'users',
             'table' => 'password_activations',
             'expire' => 4320,
+            'throttle' => 60,
+        ],
+
+        'users' => [
+            'provider' => 'users',
+            'table' => 'password_resets',
+            'expire' => 60,
             'throttle' => 60,
         ],
     ],

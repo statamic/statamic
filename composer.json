@@ -9,12 +9,12 @@
     ],
     "type": "project",
     "require": {
-        "php": "^7.3 || ^8.0",
+        "php": "^7.4 || ^8.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.82",
         "laravel/tinker": "^2.5",
-        "statamic/cms": "3.2.*"
+        "statamic/cms": "3.3.*"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.6",

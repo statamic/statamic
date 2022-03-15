@@ -18,8 +18,6 @@ trait CreatesApplication
 
         $app->make(Kernel::class)->bootstrap();
 
-        Hash::driver('bcrypt')->setRounds(4);
-
         return $app;
     }
 }

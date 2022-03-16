@@ -41,4 +41,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Provide access to $user->roles() for the Statamic Eloquent driver
+     * 
+     * @return array
+     */
+    public function getRolesAttribute()
+    {
+        return DB::table('role_user')->where('user_id', $this->id)->get()->pluck('role_id')->toArray();
+    }
 }

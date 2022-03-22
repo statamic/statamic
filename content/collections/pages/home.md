@@ -4,7 +4,7 @@ id: home
 template: home
 blueprint: pages
 ---
-## Welcome to your new brand Statamic site!
+## Welcome to your brand new Statamic site!
 
 Not sure where to do next? Here are a few ideas, but feel free to explore in your own way, in your own time.
 

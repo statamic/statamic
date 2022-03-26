@@ -8,7 +8,6 @@
 .env.backup
 .phpunit.result.cache
 .php_cs.cache
-docker-compose.override.yml
 Homestead.json
 Homestead.yaml
 npm-debug.log

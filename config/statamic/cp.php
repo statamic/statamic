@@ -26,6 +26,18 @@ return [
     */
 
     'start_page' => 'dashboard',
+    
+    /*
+    |--------------------------------------------------------------------------
+    | Listing Filters
+    |--------------------------------------------------------------------------
+    |
+    | Whether to always show the filters on listing pages or hide them behind
+    | a toggle button to keep things more simple.
+    |
+    */
+
+    'always_show_filters' => false,
 
     /*
     |--------------------------------------------------------------------------

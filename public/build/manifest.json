@@ -1,0 +1,12 @@
+{
+  "resources/css/site.css": {
+    "file": "assets/site-9bd4acd3.css",
+    "isEntry": true,
+    "src": "resources/css/site.css"
+  },
+  "resources/js/site.js": {
+    "file": "assets/site-4ed993c7.js",
+    "isEntry": true,
+    "src": "resources/js/site.js"
+  }
+}

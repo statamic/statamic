@@ -22,8 +22,39 @@ return [
         'taxonomies' => false,
         'assets' => false,
         'globals' => false,
+        'forms' => false,
         'sites' => false,
         'users' => false,
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Queries
+    |--------------------------------------------------------------------------
+    |
+    | Here you may list queries to be added to the Statamic schema.
+    |
+    | https://statamic.dev/graphql#custom-queries
+    |
+    */
+
+    'queries' => [
+        //
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Middleware
+    |--------------------------------------------------------------------------
+    |
+    | Here you may list middleware to be added to the Statamic schema.
+    |
+    | https://statamic.dev/graphql#custom-middleware
+    |
+    */
+
+    'middleware' => [
+        //
     ],
 
     /*

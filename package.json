@@ -6,7 +6,6 @@
     },
     "devDependencies": {
         "@tailwindcss/typography": "^0.5.9",
-        "@vitejs/plugin-vue2": "^2.2.0",
         "autoprefixer": "^10.4.14",
         "laravel-vite-plugin": "^0.7.2",
         "postcss": "^8.4.23",

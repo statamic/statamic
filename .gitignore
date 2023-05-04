@@ -1,4 +1,6 @@
+/.phpunit.cache
 /node_modules
+/public/build
 /public/hot
 /public/storage
 /public/vendor/statamic
@@ -6,13 +8,14 @@
 /vendor
 .env
 .env.backup
+.env.production
 .phpunit.result.cache
-.php_cs.cache
-docker-compose.override.yml
 Homestead.json
 Homestead.yaml
+auth.json
 npm-debug.log
 yarn-error.log
 .DS_Store
+/.fleet
 /.idea
 /.vscode

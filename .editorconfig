@@ -16,3 +16,9 @@ indent_size = 2
 
 [docker-compose.yml]
 indent_size = 4
+
+[postcss.config.js]
+indent_size = 2
+
+[tailwind.config.js]
+indent_size = 2

@@ -16,6 +16,3 @@ indent_size = 2
 
 [docker-compose.yml]
 indent_size = 4
-
-[*.config.js]
-indent_size = 2

@@ -16,6 +16,18 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Debugbar
+    |--------------------------------------------------------------------------
+    |
+    | Defaults to true. Set to false to disable antlers template profiling in
+    | the Laravel Debugbar package (when enabled).
+    |
+    */
+    
+    'debugbar' => env('STATAMIC_ANTLERS_DEBUGBAR', true),
+
+    /*
+    |--------------------------------------------------------------------------
     | Guarded Variables
     |--------------------------------------------------------------------------
     |

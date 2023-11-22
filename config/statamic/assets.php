@@ -119,8 +119,9 @@ return [
         | Append Original Filename
         |--------------------------------------------------------------------------
         |
-        | Append the original filename to the generated Glide URL's of your
-        | assets. This works when both caching and not-caching URLs.
+        | Append the original filename to Glide generated URLs. 
+        | This helps with Search Engine Optimization.
+        |
         */
 
         'append_original_filename' => true,

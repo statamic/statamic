@@ -114,6 +114,17 @@ return [
 
         'generate_presets_on_upload' => true,
 
+        /*
+        |--------------------------------------------------------------------------
+        | Append Original Filename
+        |--------------------------------------------------------------------------
+        |
+        | Append the original filename to the generated Glide URL's of your
+        | assets. This works when both caching and not-caching URLs.
+        */
+
+        'append_original_filename' => true,
+
     ],
 
     /*

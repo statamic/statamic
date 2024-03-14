@@ -4,26 +4,15 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Version
-    |--------------------------------------------------------------------------
-    |
-    | The desired Antlers language version to utilize. Supported values are
-    | "runtime" for the modern parser, or "regex" for the legacy parser.
-    |
-    */
-
-    'version' => 'runtime',
-
-    /*
-    |--------------------------------------------------------------------------
     | Debugbar
     |--------------------------------------------------------------------------
     |
-    | Defaults to true. Set to false to disable antlers template profiling in
-    | the Laravel Debugbar package (when enabled).
+    | Here you may specify whether the Antlers profiler should be added
+    | to the Laravel Debugbar. This is incredibly useful for finding
+    | performance impacts within any of your Antlers templates.
     |
     */
-    
+
     'debugbar' => env('STATAMIC_ANTLERS_DEBUGBAR', true),
 
     /*

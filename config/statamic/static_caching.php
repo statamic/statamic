@@ -40,6 +40,7 @@ return [
             'permissions' => [
                 'directory' => 0755,
                 'file' => 0644,
+            ]
         ],
 
     ],

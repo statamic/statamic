@@ -26,7 +26,7 @@ return [
     | well as their drivers. You may even define multiple stores for the
     | same cache driver to group types of items stored in your caches.
     |
-    | Supported drivers: "apc", "array", "database", "file", "memcached",
+    | Supported drivers: "array", "database", "file", "memcached",
     |                    "redis", "dynamodb", "octane", "null"
     |
     */
@@ -41,8 +41,8 @@ return [
         'database' => [
             'driver' => 'database',
             'table' => env('DB_CACHE_TABLE', 'cache'),
-            'connection' => env('DB_CACHE_CONNECTION', null),
-            'lock_connection' => env('DB_CACHE_LOCK_CONNECTION', null),
+            'connection' => env('DB_CACHE_CONNECTION'),
+            'lock_connection' => env('DB_CACHE_LOCK_CONNECTION'),
         ],
 
         'file' => [

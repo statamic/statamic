@@ -1,4 +1,5 @@
 {
+    "$schema": "https://getcomposer.org/schema.json",
     "name": "statamic/statamic",
     "type": "project",
     "description": "Statamic",

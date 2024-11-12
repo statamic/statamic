@@ -5,6 +5,7 @@
 /public/storage
 /public/vendor/statamic
 /storage/*.key
+/storage/pail
 /vendor
 .env
 .env.backup

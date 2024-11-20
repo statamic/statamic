@@ -5,6 +5,7 @@
 /public/storage
 /public/vendor/statamic
 /storage/*.key
+/storage/pail
 /vendor
 .env
 .env.backup
@@ -18,5 +19,6 @@ yarn-error.log
 .DS_Store
 /.fleet
 /.idea
+/.nova
 /.vscode
 /.zed

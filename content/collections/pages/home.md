@@ -6,7 +6,7 @@ blueprint: pages
 ---
 ## Welcome to your brand new Statamic site!
 
-Not sure where to do next? Here are a few ideas, but feel free to explore in your own way, in your own time.
+Not sure what to do next? Here are a few ideas, but feel free to explore in your own way, in your own time.
 
 - [Jump into the Control Panel](/cp) and edit this page or begin setting up your own collections and blueprints.
 - [Head to the docs](https://statamic.dev) and learn how Statamic works.

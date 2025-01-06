@@ -2,8 +2,8 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "dev": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "dev": "vite"
     },
     "devDependencies": {
         "@tailwindcss/typography": "^0.5.12",
@@ -11,6 +11,7 @@
         "laravel-vite-plugin": "^1.0.2",
         "postcss": "^8.4.38",
         "tailwindcss": "^3.4.3",
-        "vite": "^5.2.8"
+        "vite": "^6.0",
+        "concurrently": "^9.0.1"
     }
 }

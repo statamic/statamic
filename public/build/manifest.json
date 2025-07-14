@@ -1,8 +1,11 @@
 {
   "resources/css/site.css": {
-    "file": "assets/site-bTVMujE2.css",
+    "file": "assets/site-94mdL3MF.css",
     "src": "resources/css/site.css",
-    "isEntry": true
+    "isEntry": true,
+    "names": [
+      "site.css"
+    ]
   },
   "resources/js/site.js": {
     "file": "assets/site-l0sNRNKZ.js",

@@ -15,6 +15,7 @@
 /node_modules
 /public/build
 /public/hot
+/public/static
 /public/storage
 /public/vendor/statamic
 /storage/*.key

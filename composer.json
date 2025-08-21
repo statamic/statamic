@@ -43,8 +43,7 @@
             "Statamic\\Console\\Composer\\Scripts::preUpdateCmd"
         ],
         "post-autoload-dump": [
-            "@php artisan config:clear",
-            "@php artisan clear-compiled",
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi",
             "@php artisan statamic:install --ansi"
         ],

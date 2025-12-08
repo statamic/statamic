@@ -16,7 +16,7 @@ Statamic has extensive [documentation][docs]. We dedicate a significant amount o
 
 ## Support
 
-We provide official developer support on [Statamic Pro](https://statamic.com/pricing) projects. Community-driven support is available on the [forum](https://github.com/statamic/cms/discussions) and in [Discord][discord].
+We provide official developer support on [Statamic Pro](https://statamic.com/pricing) projects. Community-driven support is available via [GitHub Discussions](https://github.com/statamic/cms/discussions) and in [Discord][discord].
 
 
 ## Contributing

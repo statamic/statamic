@@ -11,19 +11,19 @@
     ],
     "require": {
         "php": "^8.3",
-        "laravel/framework": "^12.0",
-        "laravel/tinker": "^2.10.1",
+        "laravel/framework": "^13.0",
+        "laravel/tinker": "^3.0",
         "statamic/cms": "^6.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
         "fruitcake/laravel-debugbar": "^4.0",
-        "laravel/pail": "^1.2.2",
-        "laravel/pint": "^1.24",
+        "laravel/pail": "^1.2.5",
+        "laravel/pint": "^1.27",
         "laravel/sail": "^1.41",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.6",
-        "phpunit/phpunit": "^11.5.50",
+        "phpunit/phpunit": "^12.5.12",
         "spatie/laravel-ignition": "^2.9.1"
     },
     "autoload": {

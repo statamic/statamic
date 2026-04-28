@@ -100,7 +100,7 @@ return [
     |
     */
 
-    'ignore_query_strings' => false,
+    'ignore_query_strings' => true,
 
     'allowed_query_strings' => [
         //

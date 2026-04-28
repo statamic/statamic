@@ -100,14 +100,14 @@ return [
     |
     */
 
-    'ignore_query_strings' => false,
+    'ignore_query_strings' => true,
 
     'allowed_query_strings' => [
         //
     ],
 
     'disallowed_query_strings' => [
-        //
+        'fbclid', 'gclid', 'msclkid', 'utm_campaign', 'utm_content', 'utm_medium', 'utm_source', 'utm_term',
     ],
 
     /*

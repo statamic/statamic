@@ -184,7 +184,7 @@ return [
 
     'elevated_session_duration' => 15,
 
-    'elevated_session_url' => null,
+    'elevated_sessions_url' => null,
 
     /*
     |--------------------------------------------------------------------------

@@ -6,6 +6,7 @@ fields:
       type: markdown
       display: Content
       localizable: true
+      escape_markup: true
   -
     handle: author
     field:

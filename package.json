@@ -8,7 +8,6 @@
         "watch": "vite"
     },
     "devDependencies": {
-        "@tailwindcss/typography": "^0.5.16",
         "@tailwindcss/vite": "^4.0.6",
         "concurrently": "^10.0.3",
         "laravel-vite-plugin": "^3.1",

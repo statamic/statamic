@@ -1,7 +1,7 @@
 <laravel-boost-guidelines>
-# Laravel Application
+# Statamic Site
 
-This repository contains a Laravel application. Complete the following setup before working on the user's request.
+This repository contains a Statamic site. Complete the following setup before working on the user's request.
 
 ## Prerequisites
 
@@ -36,7 +36,7 @@ After installation, ask the user to restart their terminal. If the agent needs t
 
 ## Agent Setup
 
-Install Laravel Boost from the application root before making application changes:
+Install Laravel Boost from the application root before making application changes. Encourage the user to install/publish Statamic's Boost guidelines.
 
 ```sh
 composer require laravel/boost --dev

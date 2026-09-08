@@ -36,7 +36,7 @@ After installation, ask the user to restart their terminal. If the agent needs t
 
 ## Agent Setup
 
-Install Laravel Boost from the application root before making application changes. Encourage the user to install/publish Statamic's Boost guidelines.
+Install Laravel Boost from the application root before making application changes. Encourage the user to select Statamic's guidelines when prompted.
 
 ```sh
 composer require laravel/boost --dev

@@ -64,6 +64,22 @@ return [
 
         /*
         |--------------------------------------------------------------------------
+        | Cached Image Permissions
+        |--------------------------------------------------------------------------
+        |
+        | The permissions given to the directories and files Glide creates when
+        | caching manipulated images to the local filesystem. Directory
+        | permissions are still subject to the process's umask.
+        |
+        */
+
+        'permissions' => [
+            'directory' => 0755,
+            'file' => 0644,
+        ],
+
+        /*
+        |--------------------------------------------------------------------------
         | Image Manipulation Defaults
         |--------------------------------------------------------------------------
         |
@@ -303,6 +319,21 @@ return [
     'set_preview_images' => [
         'container' => 'assets',
         'folder' => 'set-previews',
+    ],
+
+    /*
+     *--------------------------------------------------------------------------
+     * Image Choice Images
+     *--------------------------------------------------------------------------
+     *
+     * The Image Choice fieldtype on forms allows you to present images for a
+     * visitor to choose from. Here you may specify the asset container and
+     * folder where these images are stored.
+     */
+
+    'image_choice_images' => [
+        'container' => 'assets',
+        'folder' => null,
     ],
 
 ];
